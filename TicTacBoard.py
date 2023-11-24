@@ -7,13 +7,6 @@ class TicTacBoard:
         for row in self.grid:
             print(row)
 
-    # def make_move(self, row, col, player_symbol):
-    #     moveValue = 0
-    #     if str.lower(player_symbol) == "x":
-    #         moveValue = 1
-
-    #     self.grid[row][col] = moveValue
-    #     self.print_board()
     def make_move(self, row, col, player_symbol):
         if self.is_valid_move(row, col):
             self.grid[row][col] = player_symbol
@@ -46,3 +39,6 @@ class TicTacBoard:
 
     def is_full(self):
         return all([self.grid[row][col] != None for row in range(3) for col in range(3)])
+
+    def get_grid(self):
+        return self.grid

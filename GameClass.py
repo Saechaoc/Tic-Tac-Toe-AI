@@ -125,3 +125,7 @@ class GameClass:
                 'Game Over. Click to restart.', True, (255, 0, 0))
             text_rect = text.get_rect(center=(self.width/2, self.height/2))
             self.screen.blit(text, text_rect)
+
+
+g = GameClass()
+g.run_game()
